@@ -4,12 +4,12 @@
 #include <stdio.h>
 #include <string.h>
 
-void occorrenzeLettereAlfabeto(char[], int, char[]);
+void occorrenzeLettereAlfabeto(char[], int, int[]);
 
 int main(int argc, const char * argv[])
 {
     char testo[100];
-    char occorrenze[21] = {0};
+    int occorrenze[21] = {0};
     int n;
     
     printf("Inserire un testo.\n");
@@ -25,7 +25,7 @@ int main(int argc, const char * argv[])
     return 0;
 }
 
-void occorrenzeLettereAlfabeto(char testo[], int size, char occorrenze[21])
+void occorrenzeLettereAlfabeto(char testo[], int size, int occorrenze[21])
 {
     int i;
     for(i = 0; i < size; ++i)
