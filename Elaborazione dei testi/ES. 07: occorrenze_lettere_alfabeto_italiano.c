@@ -34,13 +34,11 @@ void occorrenzeLettereAlfabeto(char testo[], int size, char occorrenze[21])
             ++occorrenze[testo[i] - 'a'];
         else if(testo[i] >= 'l' && testo[i] <= 'v')
             ++occorrenze[testo[i] - 'a' - 2];
-        else if(testo[i] == 'z')
+        else if(testo[i] == 'z' || testo[i] == 'Z')
             ++occorrenze[20];
         else if(testo[i] >= 'A' && testo[i] <= 'I')
             ++occorrenze[testo[i] - 'A'];
         else if(testo[i] >= 'L' && testo[i] <= 'V')
             ++occorrenze[testo[i] - 'A' - 2];
-        else if(testo[i] == 'Z')
-            ++occorrenze[20];
     }
 }
