@@ -10,7 +10,6 @@ char occorrenza_piu_frequente(char[], int);
 int main(int argc, const char * argv[])
 {
     char testo[200];
-    char lettera;
     int n;
     
     printf("Inserire un testo.\n");
@@ -30,7 +29,7 @@ void ricerca_occorrenze(char testo[], int size, int occorrenze[])
 
 char occorrenza_piu_frequente(char testo[], int size)
 {
-    char lettera;
+    char carattere;
     int occorrenze[256] = {0};
     int i, max = -1;
     ricerca_occorrenze(testo, size, occorrenze);
@@ -39,8 +38,8 @@ char occorrenza_piu_frequente(char testo[], int size)
         if(occorrenze[testo[i]] > max)
         {
             max = occorrenze[testo[i]];
-            lettera = testo[i];
+            carattere = testo[i];
         }
     }
-    return lettera;
+    return carattere;
 }
