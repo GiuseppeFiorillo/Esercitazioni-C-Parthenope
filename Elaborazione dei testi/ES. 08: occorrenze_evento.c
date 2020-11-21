@@ -35,7 +35,7 @@ void stampaArray(char testo[], int size)
 
 void occorrenzeEvento(char testo[], int size, char occorrenze[21])
 {
-    for(int i = 0; i < size; ++i)
+    for(int i = 1; i < size; ++i)
     {
         if(testo[i-1] == 'a' || testo[i-1] == 'A')
         {
