@@ -9,8 +9,8 @@ void frequenza_caratteri(char[], int, char*, char*);
 
 int main()
 {
-    char testo[100];
-    int n, meno_frequente, piu_frequente;
+    char testo[100], meno_frequente, piu_frequente;
+    int n; 
 
     printf("Inserisci un testo.\n");
     gets(testo);
@@ -19,7 +19,7 @@ int main()
     frequenza_caratteri(testo, n, &piu_frequente, &meno_frequente);
 
     printf("Il carattere meno frequente e': %c\n", meno_frequente);
-    printf("Il carattere piu frequente e': %c\n", piu_frequente);
+    printf("Il carattere piu' frequente e': %c\n", piu_frequente);
 
     return 0;
 }
