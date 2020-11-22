@@ -5,7 +5,7 @@
 #include <string.h>
 
 void ricerca_occorrenze(char[], int, int[]);
-char occorrenza_piu_frequente(char[], int);
+char carattere_piu_frequente(char[], int);
 
 int main(int argc, const char * argv[])
 {
@@ -16,7 +16,7 @@ int main(int argc, const char * argv[])
     gets(testo);
     n = strlen(testo);
     
-    printf("Il carattere piu' frequente e': %c\n", occorrenza_piu_frequente(testo, n));
+    printf("Il carattere piu' frequente e': %c\n", carattere_piu_frequente(testo, n));
     return 0;
 }
 
@@ -27,13 +27,14 @@ void ricerca_occorrenze(char testo[], int size, int occorrenze[])
         ++occorrenze[testo[i]];
 }
 
-char occorrenza_piu_frequente(char testo[], int size)
+char carattere_piu_frequente(char testo[], int size)
 {
-    char carattere;
-    int occorrenze[256] = {0};
-    int i, max = -1;
+    char carattere = testo[0];
+    int max, occorrenze[256] = {0}, i;
     ricerca_occorrenze(testo, size, occorrenze);
-    for(i = 0; i < size; ++i)
+    max = occorrenze[testo[0]];
+
+    for(i = 1; i < size; ++i)
     {
         if(occorrenze[testo[i]] > max)
         {
