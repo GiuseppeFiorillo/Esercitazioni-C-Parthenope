@@ -36,7 +36,7 @@ void stampa_array_int(int array[], int size)
         printf("%d elemento: %d\n", i + 1, array[i]);
 }
 
-void ordinamento_per_inserimento(int array[], int n)
+void ordinamento_per_inserimento(int array[], int size)
 {
     int i, j, elementoDaInserire;
     
