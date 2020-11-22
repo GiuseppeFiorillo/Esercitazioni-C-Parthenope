@@ -40,7 +40,7 @@ void ordinamento_per_inserimento(int array[], int size)
 {
     int i, j, elementoDaInserire;
     
-    for(i = 1; i < n; ++i)
+    for(i = 1; i < size; ++i)
     {
         elementoDaInserire = array[i];
         j = i - 1;
