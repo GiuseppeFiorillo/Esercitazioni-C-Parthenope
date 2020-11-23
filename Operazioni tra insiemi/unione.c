@@ -10,7 +10,8 @@ int appartiene_aF(float, float[], int);
 void unione(int*, int, int*, int, int*, int*);
 void unione_aF(float*, int, float*, int, float*, int*);
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char * argv[]) 
+{
     int n_a, n_b, n_c, i;
     printf("Inserire la dimensione del primo array: ");
     scanf("%d", &n_a);
