@@ -33,7 +33,7 @@ void sequenza_piu_lunga(int *array, int size, int *lunghezza, int *indice)
         else
             flag = cont = 0;
         
-        if(cont > *lunghezza)
+        if(cont >= *lunghezza)
         {
             *lunghezza = cont + 1;
             *indice = inizio;
