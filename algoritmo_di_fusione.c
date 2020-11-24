@@ -23,8 +23,9 @@ int main()
     leggi_da_tastiera_int(B, n_b);
 
     fusioneWhile(A, n_a, B, n_b, C);
-    printf("Array Fusione (ordinato):\n");
+    printf("\nArray Fusione (ordinato):\n");
     stampa_array_int(C, n_c);
+    putchar('\n')
 
     return 0;
 }
