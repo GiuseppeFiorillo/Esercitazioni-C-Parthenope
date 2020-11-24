@@ -2,7 +2,6 @@
   restituisce come parametro di output il k-imo più grande elemento dell'array (N.B.: l'array non deve essere
   ordinato).*/
 #include <stdio.h>
-#include <limits.h>
 
 int trovareKimoElemento(int[], size_t, int);
 
