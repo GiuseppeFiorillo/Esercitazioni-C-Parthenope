@@ -73,23 +73,17 @@ void ordinamento_per_inserimento(int a[], size_t size)
         if(i_a < n_a && i_b < n_b)
         {
             if(a[i_a] < b[i_b])
-            {
                 c[i_c] = a[i_a++];
-            }
+                
             else
-            {
                 c[i_c] = b[i_b++];
-
-            }
         }
         else if(i_a >= n_a)
-        {
             c[i_c] = b[i_b++];
-        }
+
         else
-        {
             c[i_c] = a[i_a++];
-        }
+
     }
 } */
 
