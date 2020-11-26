@@ -76,7 +76,8 @@ size_t min_ind(char* array, size_t size)
    assoluta, perché indipendente dai valori degli array.
    Passiamo ora ad analizzare i confronti. Poiché nelle funzioni ord_sel_min e scambiare_C non compaiono confronti,
    i soli confronti sono quelli contenuti nella function min_val_ind. Ricordiamo che la complessità di tempo
-   dell'algoritmo di determinazione del minimo assoluto di un array è data dal size dell'array -1 operazioni di confronto. Tale complessità è assoluta.
+   dell'algoritmo di determinazione del minimo assoluto di un array è data dal size dell'array -1 operazioni di confronto. 
+   Tale complessità è assoluta.
    T(n) = (n*(n-1))/2 = 1/2(n^2-n) = O(n^2) confronti,
    T(n) = n = O(n) scambi.
    Poiché la complessità di tempo dell'AOSMIN non dipende dal valore dei dati, l'AOSMIN assume lo stesso costo
