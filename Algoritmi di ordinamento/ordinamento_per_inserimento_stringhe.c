@@ -10,9 +10,10 @@ int main(int argc, const char * argv[])
         "Anna",
         "Raffaele"
     };
+    size_t i;
     
     ord_ins_sP(elenco, 3);
-    for(int i = 0; i < 3; ++i)
+    for(i = 0; i < 3; ++i)
         printf("%s\n", elenco[i]);
     
     return 0;
