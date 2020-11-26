@@ -3,6 +3,7 @@
 void min_val_ind(char*, size_t, char*, size_t*);
 void scambiare_C(char*, char*);
 void ord_sel_min(char*, size_t);
+size_t min_ind(char*, size_t);
 
 int main(int argc, const char * argv[])
 {
@@ -42,14 +43,27 @@ void scambiare_C(char* a, char* b)
 
 void ord_sel_min(char* array, size_t size)
 {
-    size_t i, indice_min;
-    char min_array;
+    size_t i, i_min;
+    char minimo;
     
-    for(i = 0; i < size - 1; ++i)   //L'algoritmo effettua un numero di passi pari al size dell'array - 1
+    for(i = 0; i < size - 1; ++i)
     {
-        min_val_ind(&array[i], size - i, &min_array, &indice_min);
-        scambiare_C(&array[i], &array[indice_min + i]);
+//        min_val_ind(&array[i], size - i, &minimo, &i_min);
+//        scambiare_C(&array[i], &array[i_min + i]);
+        scambiare_C(&array[i], &array[min_ind(&array[i], size - i) + i]);
     }
+}
+
+size_t min_ind(char* array, size_t size)
+{
+    size_t i, i_min = 0;
+    for(i = 1; i < size; ++i)
+    {
+        if(array[i_min] > array[i])
+            i_min = i;
+    }
+    
+    return i_min;
 }
 
 /* Analizziamo la complessità dell'AOSMIN. La complessità di spazio è n, perché l'algoritmo opera completamente
