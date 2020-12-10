@@ -34,7 +34,6 @@ int uguale(prodotto lista1[], size_t n, prodotto lista2[], size_t m) {
     if(n != m)
         return 0;
     for(i = 0; i < n; i++) {
-
         if(!(uguaglianza(lista1[i], lista2[i])))
             return 0;
     }
