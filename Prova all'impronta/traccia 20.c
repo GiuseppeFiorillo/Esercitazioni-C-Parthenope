@@ -60,7 +60,7 @@ int main(int argc, const char * argv[]) {
         elenco[i].codice = rand()%1000;
     }
     
-    ord_sel_min(elenco, 3);
+    ord_sel_min(elenco, n);
 
     putchar('\n');
     for(i = 0; i < n; i++) {
