@@ -65,6 +65,7 @@ int main() {
     printf("\n\nSECONDA LISTA\n");
     for(size_t i = 0; i < size2; i++) {
         lista2[i].nome = malloc(40 * sizeof(char));
+        
         if(lista2[i].nome == NULL) {
             printf("Non riesco ad allocare sufficiente memoria.\n");
             return 0;
