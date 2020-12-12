@@ -110,7 +110,7 @@ int uguale(prodotto *lista1, size_t n, prodotto *lista2, size_t m) {
 }
 
 int uguaglianza(prodotto prodotto1, prodotto prodotto2) {
-    if((strcmp(prodotto1.nome, prodotto1.nome) == 0) &&
+    if((strcmp(prodotto1.nome, prodotto2.nome) == 0) &&
        prodotto1.codice == prodotto2.codice &&
        prodotto1.prezzo == prodotto2.prezzo)
         return 1;
