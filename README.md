@@ -1,5 +1,5 @@
 # Esercitazioni-C-Parthenope
-Questa repository è stata pensata per aiutare gli studenti dell'Università degli Studi di Napoli Parthenope nello svolgimento degli esercizi presenti nel manuale di Programmazione I dei professori Giulio Giunta ed Angelo Ciaramella.
+Questa repository è stata pensata per aiutare gli studenti dell'Università degli Studi di Napoli Parthenope nello svolgimento degli esercizi presenti nel manuale di Programmazione I dei professori Giulio Giunta ed Angelo Ciaramella e nello svolgimento delle tracce della prova all'impronta.
 Tutti i codici sono funzionanti e non necessitano modifiche.
 ## NOTA BENE:
 È stato inserito il main nelle tracce che richiedono di sviluppare una function al solo scopo di illustrare l'implementazione della funzione in un programma.
