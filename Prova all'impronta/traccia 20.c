@@ -30,11 +30,10 @@ void ord_sel_min(partecipante*, size_t);
 
 int main(int argc, const char * argv[]) {
     size_t n, i;
-    printf("Quanti partecipanti vuoi inserire?\n");
-    scanf("%zu%*c", &n);
-
     partecipante* elenco;
     id* nominativi;
+    printf("Quanti partecipanti vuoi inserire?\n");
+    scanf("%zu%*c", &n);
     
     elenco = malloc(n * sizeof(partecipante));
     nominativi = malloc(n * sizeof(partecipante));
