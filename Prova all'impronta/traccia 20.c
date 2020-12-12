@@ -33,13 +33,21 @@ int main(int argc, const char * argv[]) {
     printf("Quanti partecipanti vuoi inserire?\n");
     scanf("%zu%*c", &n);
 
-    partecipante elenco[n];
-    id nominativi[n];
-
+    partecipante* elenco;
+    id* nominativi;
+    
+    elenco = malloc(n * sizeof(partecipante));
+    nominativi = malloc(n * sizeof(partecipante));
+    
+    if(!elenco || !nominativi) {
+        printf("Non riesco ad allocare memoria.\n");
+        return 0;
+    }
     srand(time(NULL));
     
+    putchar('\n');
     for(i = 0; i < n; i++) {
-        nominativi[i].nome = malloc(40*sizeof(char));
+        nominativi[i].nome = malloc(40 * sizeof(char));
         if(nominativi[i].nome != NULL) {
             printf("Inserisci il nome del %zu partecipante: ", i+1);
             if(fgets(nominativi[i].nome, 40, stdin))
@@ -54,8 +62,10 @@ int main(int argc, const char * argv[]) {
             printf("Inserisci il cognome del %zu partecipante: ", i+1);
             if(fgets(nominativi[i].cognome, 40, stdin))
                 nominativi[i].cognome[strcspn(nominativi[i].cognome, "\n")] = 0;
-        } else
+        } else {
             printf("Non riesco ad alloccare memoria per il [%zu] nome.\n", i);
+            return 0;
+        }
         
         elenco[i].utente = &nominativi[i];
         elenco[i].codice = rand()%1000;
@@ -73,6 +83,9 @@ int main(int argc, const char * argv[]) {
         free(elenco[i].utente->nome);
         free(elenco[i].utente->cognome);
     }
+    
+    free(elenco);
+    free(nominativi);
     
     return 0;
 }
