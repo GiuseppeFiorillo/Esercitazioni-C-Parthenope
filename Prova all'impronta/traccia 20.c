@@ -31,8 +31,7 @@ void ord_sel_min(partecipante*, size_t);
 int main(int argc, const char * argv[]) {
     size_t n, i;
     printf("Quanti partecipanti vuoi inserire?\n");
-    scanf("%zu", &n);
-    getchar();
+    scanf("%zu%*c", &n);
 
     partecipante elenco[n];
     id nominativi[n];
@@ -45,8 +44,10 @@ int main(int argc, const char * argv[]) {
             printf("Inserisci il nome del %zu partecipante: ", i+1);
             if(fgets(nominativi[i].nome, 40, stdin))
                 nominativi[i].nome[strcspn(nominativi[i].nome, "\n")] = 0;
-        } else
+        } else {
             printf("Non riesco ad alloccare memoria per il [%zu] nome.\n", i);
+            return 0;
+        }
         
         nominativi[i].cognome = malloc(40*sizeof(char));
         if(nominativi[i].cognome != NULL) {
