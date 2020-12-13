@@ -11,7 +11,7 @@ che due dati struct sono uguali se sono uguali tutti i loro campi.*/
 #include <string.h>
 
 typedef struct {
-    char* nome;
+    char *nome;
     int codice;
     double prezzo;
 } prodotto;
