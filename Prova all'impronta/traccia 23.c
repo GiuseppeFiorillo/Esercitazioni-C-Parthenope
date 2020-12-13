@@ -28,7 +28,7 @@ void esercizio(char*, char*, int, carriera*, int *num_esami);
 int main(int argc, const char * argv[])
 {
     char nome[100], cognome[100];
-    int matricola, num_esami;
+    int matricola, num_esami = 0;
     carriera stud;
     
     printf("Inserisci il tuo nome: ");
@@ -47,7 +47,7 @@ int main(int argc, const char * argv[])
     
     for(size_t i = 0; i < num_esami; i++)
     {
-        printf("Voto %s di %d CFU: %d\n", stud.libretto[i].materia, stud.libretto[i].cfu, stud.libretto[i].voto);
+        printf("Voto %s (%d CFU): %d\n", stud.libretto[i].materia, stud.libretto[i].cfu, stud.libretto[i].voto);
     }
     
     return 0;
