@@ -19,7 +19,8 @@ typedef struct {
 int uguale(prodotto*, size_t, prodotto*, size_t);
 int uguaglianza(prodotto, prodotto);
 
-int main() {
+int main() 
+{
     prodotto *lista1 = NULL, *lista2 = NULL;   //Dichiarazione a puntatori di due array del tipo prodotto (struct)
     size_t size1, size2;    //Dichiarazione dei size delle due strutture
     
@@ -33,21 +34,26 @@ int main() {
     
     //Allocazione delle strutture in memoria
     lista1 = malloc(size1 * (sizeof(prodotto)));
-    if(lista1 == NULL) {
+    if(lista1 == NULL) 
+    {
         printf("Non riesco ad allocare sufficiente memoria.\n");
         return 0;
     }
+    
     lista2 = malloc(size2 * (sizeof(prodotto)));
-    if(lista2 == NULL) {
+    if(lista2 == NULL) 
+    {
         printf("Non riesco ad allocare sufficiente memoria.\n");
         return 0;
     }
         
     printf("\n\nPRIMA LISTA:\n");
-    for(size_t i = 0; i < size1; i++) {
+    for(size_t i = 0; i < size1; i++) 
+    {
         lista1[i].nome = malloc(40 * sizeof(char));
         
-        if(lista1[i].nome == NULL) {
+        if(lista1[i].nome == NULL) 
+        {
             printf("Non riesco ad allocare sufficiente memoria.\n");
             return 0;
         }
@@ -63,10 +69,12 @@ int main() {
     }
     
     printf("\n\nSECONDA LISTA\n");
-    for(size_t i = 0; i < size2; i++) {
+    for(size_t i = 0; i < size2; i++) 
+    {
         lista2[i].nome = malloc(40 * sizeof(char));
         
-        if(lista2[i].nome == NULL) {
+        if(lista2[i].nome == NULL) 
+        {
             printf("Non riesco ad allocare sufficiente memoria.\n");
             return 0;
         }
@@ -99,18 +107,21 @@ int main() {
     return 0;
 }
 
-int uguale(prodotto *lista1, size_t n, prodotto *lista2, size_t m) {
+int uguale(prodotto *lista1, size_t n, prodotto *lista2, size_t m) 
+{
     size_t i;
     if(n != m)
         return 0;
-    for(i = 0; i < n; i++) {
+    for(i = 0; i < n; i++) 
+    {
         if(!(uguaglianza(lista1[i], lista2[i])))
             return 0;
     }
     return 1;
 }
 
-int uguaglianza(prodotto prodotto1, prodotto prodotto2) {
+int uguaglianza(prodotto prodotto1, prodotto prodotto2) 
+{
     if((strcmp(prodotto1.nome, prodotto2.nome) == 0) &&
        prodotto1.codice == prodotto2.codice &&
        prodotto1.prezzo == prodotto2.prezzo)
