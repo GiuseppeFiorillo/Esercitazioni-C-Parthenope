@@ -13,7 +13,7 @@ typedef struct {
 } studente;
 
 typedef struct {
-    char materia[30];
+    char materia[40];
     int cfu;
     int voto;
 } esame;
@@ -23,7 +23,7 @@ typedef struct {
     esame libretto[20];
 } carriera;
 
-void esercizio(char*, char*, int, carriera*, int *num_esami);
+void aggiorna_carriera(char*, char*, int, carriera*, int*);
 
 int main(int argc, const char * argv[])
 {
@@ -42,18 +42,21 @@ int main(int argc, const char * argv[])
     printf("Inserisci la tua matricola: ");
     scanf("%d", &matricola);
     
-    esercizio(nome, cognome, matricola, &stud, &num_esami);
+    aggiorna_carriera(nome, cognome, matricola, &stud, &num_esami);
     printf("\nNome: %s\tCognome: %s\tMatricola: %d\n", stud.alunno.nome, stud.alunno.cognome, stud.alunno.matricola);
     
-    for(size_t i = 0; i < num_esami; i++)
+    if(num_esami > 0)
     {
-        printf("Voto %s (%d CFU): %d\n", stud.libretto[i].materia, stud.libretto[i].cfu, stud.libretto[i].voto);
+        for(size_t i = 0; i < num_esami; i++)
+            printf("Voto %s (%d CFU): %d\n", stud.libretto[i].materia, stud.libretto[i].cfu, stud.libretto[i].voto);
     }
+    else
+        printf("Non hai dato alcun esame.\n");
     
     return 0;
 }
 
-void esercizio(char *nome, char *cognome, int matricola, carriera *stud, int *num_esami)
+void aggiorna_carriera(char *nome, char *cognome, int matricola, carriera *stud, int *num_esami)
 {
     studente dati;
     size_t i = 0;
@@ -68,7 +71,7 @@ void esercizio(char *nome, char *cognome, int matricola, carriera *stud, int *nu
     for(i = 0; i < *num_esami; i++)
     {
         printf("Inserire il nome della materia del %zu esame: ", i+1);
-        fgets(stud->libretto[i].materia, 30, stdin);
+        fgets(stud->libretto[i].materia, 40, stdin);
         stud->libretto[i].materia[strcspn(stud->libretto[i].materia, "\n")] = 0;
         
         printf("Inserire il voto di %s: ", stud->libretto[i].materia);
