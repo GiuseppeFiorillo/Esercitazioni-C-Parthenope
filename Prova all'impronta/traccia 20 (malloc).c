@@ -1,3 +1,7 @@
+// NOTA BENE: Questa versione è stata realizzata solo per soddisfare gli utenti più curiosi. Non sarà necessario fare un programma simile durante la prova
+// all'impronta, in quanto l'allocazione dinamica non è argomento del corso di Programmazione I. Se sei interessato alla versione "base" di questo programma
+// puoi consultare il file "traccia 20.c".
+
 /*TRACCIA 20
  Dato un elenco (array) di persone partecipanti a un concorso, ordinare l’elenco in ordine alfabetico in
  base al campo cognome. La struttura che identifica il partecipante è
@@ -30,6 +34,7 @@ void ord_sel_min(partecipante*, size_t);
 
 int main(int argc, const char * argv[]) 
 {
+    srand(time(NULL));
     size_t n, i;
     partecipante* elenco;
     id* nominativi;
@@ -44,7 +49,6 @@ int main(int argc, const char * argv[])
         printf("Non riesco ad allocare memoria.\n");
         return 0;
     }
-    srand(time(NULL));
     
     putchar('\n');
     for(i = 0; i < n; i++) 
