@@ -1,7 +1,3 @@
-// NOTA BENE: Questa versione è stata realizzata solo per soddisfare gli utenti più curiosi. Non sarà necessario fare un programma simile durante la prova
-// all'impronta, in quanto l'allocazione dinamica non è argomento del corso di Programmazione I. Se sei interessato alla versione "base" di questo programma
-// puoi consultare il file "traccia 07.c".
-
 /*Scrivere una funzione che dati in input due array di strutture del seguente tipo
 struct prodotto {char *nome; int codice; double prezzo;};
 restituisce in output 1 se i due array di struct sono uguali, 0 se non lo sono. Si noti
