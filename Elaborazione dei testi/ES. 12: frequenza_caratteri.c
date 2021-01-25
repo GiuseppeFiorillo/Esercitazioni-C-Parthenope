@@ -28,9 +28,7 @@ void ricerca_occorrenze(char testo[], int size, int occorrenze[])
 {
     int i;
     for (i = 0; i < size; ++i)
-    {
         ++occorrenze[testo[i]];
-    }
 }
 
 void frequenza_caratteri(char testo[], int size, char* piu_frequente, char* meno_frequente)
@@ -41,15 +39,12 @@ void frequenza_caratteri(char testo[], int size, char* piu_frequente, char* meno
     *meno_frequente = testo[0];
     min = max = occorrenze[testo[0]];
 
-    for(i = 1; i < size; ++i)
-    {
-        if(occorrenze[testo[i]] > max)
-        {
+    for(i = 1; i < size; ++i) {
+        if(occorrenze[testo[i]] > max) {
             max = occorrenze[testo[i]];
             *piu_frequente = testo[i];
         }
-        if(min > occorrenze[testo[i]])
-        {
+        if(min > occorrenze[testo[i]]) {
             min = occorrenze[testo[i]];
             *meno_frequente = testo[i];
         }
